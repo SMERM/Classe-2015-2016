@@ -6,6 +6,7 @@
 * task:
   * realizzare il progetto iniziale (crescendo a "costruire")
 	* realizzare il progetto inverso (decrescendo a "dissolvere")
+	* lineare, esponenziale, logaritmico
 	* realizzare oggetti per il crescendo e il decrescendo
 	* realizzare meta partitura
 

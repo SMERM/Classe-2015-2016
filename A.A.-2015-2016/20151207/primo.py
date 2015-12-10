@@ -1,5 +1,5 @@
 import math  
-sfdur= 220
+sfdur= 220    # durata totale del pezzo
 phi= 0.6180339
 ftime= sfdur*phi # durata del processo di accelerando
 w0= 2

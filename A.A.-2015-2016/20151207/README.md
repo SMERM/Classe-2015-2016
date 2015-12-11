@@ -12,4 +12,6 @@
 
 ## Compiti per casa
 
-* ricostruire composizione con lo strumentario messo a punto
+* realizzare con funzione esponenziale
+* realizzare con funzione logaritmica
+* realizzare a dissolvere

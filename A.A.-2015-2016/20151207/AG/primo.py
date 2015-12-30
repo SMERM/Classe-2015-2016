@@ -8,9 +8,9 @@ p0= 0.96 # rapporto tra le due funzioni dur e step
 p1= 0.01
 t0= 0
 t1= ftime
-aw= -(math.log(w1)-math.log(w0))/(t1-t0) # coeff ang funzione
+aw= (math.log(w1)-math.log(w0))/(t1-t0) # coeff ang funzione
 bw= math.log(w0)-(aw*t0) 
-ap= -(math.log(p1)-math.log(p0))/(t1-t0) 
+ap= (math.log(p1)-math.log(p0))/(t1-t0) 
 bp= math.log(p0)-(ap*t0) 
 at= t0
 while (at < ftime):

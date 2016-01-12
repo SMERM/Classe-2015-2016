@@ -1,4 +1,4 @@
-# Lezione di lunedì 11 dicembre 2016
+# Lezione di lunedì 11 gennaio 2016
 
 ![lavagna](./TR_I_20160111.jpg)
 

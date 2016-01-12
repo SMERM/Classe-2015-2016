@@ -1,14 +1,16 @@
 # Lezione di lunedì 11 dicembre 2016
 
-## Cose da fare
+![lavagna](./TR_I_20160111.jpg)
+
+## Cose fatte
 
 * verifica del compito per casa
   * realizzare con funzione esponenziale
   * realizzare con funzione logaritmica
-  * realizzare a dissolvere
-* task:
-  * realizzare meta partitura
-  * introduzione a octave ai polinomi di grado più alto (curve con più punti)
-  * contrappunto di battimenti
+* incapsulamento della funzione
 
 ## Compiti per casa
+
+* realizzazione incapsulata con frequenze diverse
+* (*più difficile*): realizzazione con constraint di tempo stringenti
+  (funzioni non devono approssimare ma coincidere esattamente)

@@ -13,5 +13,10 @@
 
 ## Compiti per casa
 
-* realizzare l'esercizio fatto in classe con modulazione d'ampiezza e fasci di
-  glissandi
+* Esercizio 1
+  * realizzare l'esercizio fatto in classe con modulazione d'ampiezza di
+    frequenza compresa tra 3 e 7 cicli **per minuto** e ampiezza compresa tra
+    100 e 1500 (in ampiezza lineare)
+* Esercizio 2
+  * aggiungere all'Es.1 anche l'elaborazione delle frequenze (casuali) in fasci di
+    glissandi

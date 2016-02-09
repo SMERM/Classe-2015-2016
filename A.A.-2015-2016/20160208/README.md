@@ -1,6 +1,6 @@
 # Lezione di lunedì 08 febbraio 2016
 
-![lavagna](./TR_I_20160209.jpg)
+![lavagna](./TR_I_20160208.jpg)
 
 ## Cose da fare
 

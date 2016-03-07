@@ -34,9 +34,12 @@ def accelerando_gliss(t0,t1,w0,w1,freq0,freq1,ampfreq,amprange,ampoffset):
 		p= ap*atstart+bp # seconda funzoine lineare (dur/step)
 		step= w*p
 		dur= w-step
-		amp= math.sin(2*math.pi*ampfreq*at)*amprange+ampoffset		
+		ampstart= math.sin(2*math.pi*ampfreq*at)*amprange+ampoffset
+		ampend= math.sin(2*math.pi*ampfreq*(at+dur))*amprange+ampoffset		
 		freqstart= freqa*(atstart)+freqb
 		freqend= freqa*(atstart+dur)+freqb
-		print "i1 %8.4f %8.4f %8.4f %8.4f %+8.4f; w= %7.4f, p= %7.4f, step= %7.4f" % (at, dur, freqstart, freqend, amp, w, p, step) 
+		print "i1 %8.4f %8.4f %8.4f %8.4f %+8.4f %+8.4f; w= %7.4f, p= %7.4f, step= %7.4f" % (at, dur, freqstart, freqend, ampstart, ampend, w, p, step) 
 		at= at+w
-	print "i1 %8.4f %8.4f %8.4f %8.4f %+8.4f" % (at, totdur-ftime, freq1, freq1, amp) 
+	ampstart= math.sin(2*math.pi*ampfreq*at)*amprange+ampoffset
+	ampend= math.sin(2*math.pi*ampfreq*(at+dur))*amprange+ampoffset
+	print "i1 %8.4f %8.4f %8.4f %8.4f %+8.4f %+8.4f" % (at, totdur-ftime, freq1, freq1, ampstart, ampend) 

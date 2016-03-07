@@ -5,8 +5,10 @@ nchnls= 1
 instr 1
 ifreqstart= p4
 ifreqend= p5
-iamp= ampdbfs(p6)
+iampstart= p6
+iampend= p7
+kamp line iampstart,p3,iampend
 kfreq line ifreqstart,p3,ifreqend
-aout oscil iamp, kfreq, 1
+aout oscil ampdbfs(kamp), kfreq, 1
 out aout
 endin

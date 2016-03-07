@@ -7,7 +7,7 @@ num_note= 100
 n= 0
 totdur= 60.0 
 ampmin= 20*math.log10(100.0/32768)
-ampmax= 20*math.log10(1500.0/32768)
+ampmax= 20*math.log10(1000.0/32768)
 amprange= (ampmax-ampmin)/2 #ampiezza dell'oscillazione in db (-6 sarebbe diviso 2 in db)
 ampfreq= 5/totdur
 ampoffset= ampmin+amprange
@@ -20,6 +20,6 @@ while (n < num_note):
 	w1= random.random()*(dur/5)+(dur/10)  # larghezza cella, se minore acc se mag decel
 	f0= random.random()*4800+200
 	f1= random.random()*4800+200
-	amp= math.sin(2*math.pi*ampfreq*t0)*amprange+ampoffset
-	Pro_crescendi_gliss.accelerando_gliss(t0, t1, w0, w1, f0, f1,amp) 
+	
+	Pro_crescendi_gliss.accelerando_gliss(t0, t1, w0, w1, f0, f1,ampfreq,amprange,ampoffset) 
 	n= n+1

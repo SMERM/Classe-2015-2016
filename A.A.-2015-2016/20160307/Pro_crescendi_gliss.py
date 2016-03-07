@@ -1,7 +1,7 @@
 import math
 # t0(inizio del processo), t1(fine del processo), w0(durata iniziale della cella), w1(durata finale della cella) freq0(frequenza iniziale), freq1(frequenza finale)  
 phi= 0.6180339
-def accelerando_gliss(t0,t1,w0,w1,freq0,freq1,amp):
+def accelerando_gliss(t0,t1,w0,w1,freq0,freq1,ampfreq,amprange,ampoffset):
 	totdur= t1-t0
 	ftime= totdur*phi # durata del processo di accelerando 
 	p0= 0.96 # rapporto tra dur e step
@@ -34,6 +34,7 @@ def accelerando_gliss(t0,t1,w0,w1,freq0,freq1,amp):
 		p= ap*atstart+bp # seconda funzoine lineare (dur/step)
 		step= w*p
 		dur= w-step
+		amp= math.sin(2*math.pi*ampfreq*at)*amprange+ampoffset		
 		freqstart= freqa*(atstart)+freqb
 		freqend= freqa*(atstart+dur)+freqb
 		print "i1 %8.4f %8.4f %8.4f %8.4f %+8.4f; w= %7.4f, p= %7.4f, step= %7.4f" % (at, dur, freqstart, freqend, amp, w, p, step) 

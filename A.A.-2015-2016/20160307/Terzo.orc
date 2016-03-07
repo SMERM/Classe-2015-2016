@@ -5,7 +5,7 @@ nchnls= 1
 instr 1
 ifreqstart= p4
 ifreqend= p5
-iamp= ampdb(p6)
+iamp= ampdbfs(p6)
 kfreq line ifreqstart,p3,ifreqend
 aout oscil iamp, kfreq, 1
 out aout

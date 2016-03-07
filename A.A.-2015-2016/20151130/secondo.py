@@ -1,6 +1,6 @@
 fdur= 120 # durata totale 
 dur= 0.083 
-step= dur/3 # distanza tra una nota e quella succ.
+step= dur/20 # distanza tra una nota e quella succ.
 n= 0 # variabile pruduzione note
 at= 0
 while (at < fdur): 

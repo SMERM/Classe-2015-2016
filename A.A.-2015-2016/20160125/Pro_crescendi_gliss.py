@@ -13,10 +13,24 @@ def accelerando_gliss(t0,t1,w0,w1,freq0,freq1):
 	ap= (p1-p0)/(ftime) # decrescita esponenziale del rapporto tra dur e step
 	bp= p0
 	at= t0
+	dur = 0
+	while (at < (t0+ftime)):
+		atstart=at-t0
+		w=math.exp((aw*atstart)+bw)
+		p= ap*atstart+bp
+		step= w*p
+		dur= w-step
+		at= at+w
+	finaldur= at+dur
+	c= totdur/finaldur # coeff sommatoria
 	print ";nota con arg %5.2f %5.2f %5.2f %5.2f %5.2f %5.2f" % (t0, t1, w0, w1, freq0, freq1)
+	print ";valori attesi; w0= %5.2f , w1= %5.2f" % (math.exp(bw) , math.exp(ftime*aw+bw))
+	print ";valori attesi frequenza; freqa= %8.5f , freqb= %8.5f" % (freqb, freqa*ftime+freqb) 
+	print ";valore c; c= %8.5f" % (c) 
+	at= 0
 	while (at < (t0+ftime)):
 		atstart= at-t0
-		w= math.exp((aw*atstart)+bw) # prima funzione lineare (larghezza cella)
+		w= math.exp((aw*atstart)+bw)*c # prima funzione lineare (larghezza cella)
 		p= ap*atstart+bp # seconda funzoine lineare (dur/step)
 		step= w*p
 		dur= w-step

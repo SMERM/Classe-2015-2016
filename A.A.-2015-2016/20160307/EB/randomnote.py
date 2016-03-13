@@ -18,8 +18,10 @@ while (n < num_note):
 	dur= t1-t0
 	w0= random.random()*(dur/5)+(dur/10)   
 	w1= random.random()*(dur/5)+(dur/10)  # larghezza cella, se minore acc se mag decel
-	f0= random.random()*4800+200
-	f1= random.random()*4800+200
+	f0min= random.random()*1+200
+	f0max= random.random()*1+1000	
+	f1min= random.random()*1+4200
+	f1max= random.random()*1+5000
 	
-	Pro_crescendi_gliss.accelerando_gliss(t0, t1, w0, w1, f0, f1,ampfreq,amprange,ampoffset) 
+	Pro_crescendi_gliss.accelerando_gliss(t0 ,t1 ,w0 ,w1 ,f0min, f0max, f1min, f1max ,ampfreq ,amprange ,ampoffset) 
 	n= n+1

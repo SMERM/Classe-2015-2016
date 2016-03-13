@@ -1,13 +1,11 @@
 import math
 # t0(inizio del processo), t1(fine del processo), w0(durata iniziale della cella), w1(durata finale della cella) freq0(frequenza iniziale), freq1(frequenza finale)  
 phi= 0.6180339
-def accelerando_gliss(t0,t1,w0,w1,freq0,freq1,ampfreq,amprange,ampoffset):
+def accelerando_gliss(t0,t1,w0,w1,freq0min,freq0max,freq1min,freq1max,ampfreq,amprange,ampoffset):
 	totdur= t1-t0
 	ftime= totdur*phi # durata del processo di accelerando 
 	p0= 0.96 # rapporto tra dur e step
 	p1= 0.01
-	freqa= (freq1-freq0)/(ftime) # Coefficente angolare funzione frequenza
-	freqb= freq0
 	aw= (math.log(w1)-math.log(w0))/(ftime) # decrescita esponenziale cella
 	bw= (math.log(w0))
 	ap= (p1-p0)/(ftime) # decrescita lineare del rapporto tra dur e step
@@ -21,6 +19,14 @@ def accelerando_gliss(t0,t1,w0,w1,freq0,freq1,ampfreq,amprange,ampoffset):
 		step= w*p
 		dur= w-step
 		at= at+w
+		freq0a= (freq0max-freq0min)/(ftime)
+		freq0b= freq0max
+		freq1a= (freq1max-freq1min)/(ftime)
+		freq1b= freq1max
+		freq0= freq0a*(atstart)+freq0b
+		freq1= freq1a*(atstart)+freq1b
+		freqa= (freq1-freq0)/(ftime) # Coefficente angolare funzione frequenza
+		freqb= freq0
 	finaldur= at+dur
 	c= totdur/finaldur # coeff sommatoria
 	print ";nota con arg %5.2f %5.2f %5.2f %5.2f %5.2f %5.2f" % (t0, t1, w0, w1, freq0, freq1)

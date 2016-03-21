@@ -20,5 +20,6 @@ while (n < num_note):
 	w1= random.random()*(dur/5)+(dur/10)  # larghezza cella, se minore acc se mag decel
 	f0= random.random()*4800+200
 	f1= random.random()*4800+200
-	Pro_crescendi_gliss.accelerando_gliss(t0, t1, w0, w1, f0, f1,ampfreq, amprange, ampoffset) 
+	
+	Pro_crescendi_gliss.accelerando_gliss(t0, t1, w0, w1, f0, f1,ampfreq,amprange,ampoffset) 
 	n= n+1

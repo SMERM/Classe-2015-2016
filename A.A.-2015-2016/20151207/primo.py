@@ -18,7 +18,7 @@ while (at < ftime):
 	p= ap*at+bp # seconda f sul rapporto tra dur e step (percentuale tra dur e step) 
 	step= w*p
 	dur= w-step
-	print "i1 %8.4f %8.4f %8.4f" % (at, dur, at) # %8.4f argomenti che vengono sost nella stringa
+	print "i1 %8.4f %8.4f %8.4f; w= %8.4f p= %8.4f step= %8.4f" % (at, dur, at, w, p, step) # %8.4f argomenti che vengono sost nella stringa
 	at= at+w
 print "i1 %8.4f %8.4f %8.4f" % (at, sfdur-ftime, at) # %8.4f argomenti che vengono sost nella stringa
 

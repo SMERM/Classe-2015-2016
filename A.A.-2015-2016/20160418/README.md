@@ -70,5 +70,5 @@ for line in fileinput.input():
 print ".PE"
 ```
 * che produce il seguente disegno:
-![disegno[(./100note.jpg)
+![disegno](./100note.jpg)
 

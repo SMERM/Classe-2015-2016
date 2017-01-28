@@ -1,7 +1,7 @@
 # Lezione di lunedì 23 gennaio 2017
 
-![whiteboard 1](./TR_I_20170123_1.jpg)
-![whiteboard 2](./TR_I_20170123_2.jpg)
+![whiteboard 1](./TR_II_20170123_1.jpg)
+![whiteboard 2](./TR_II_20170123_2.jpg)
 
 ## Argomenti
 
